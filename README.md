@@ -18,7 +18,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class A
+  
+  include Hashish
+  attr_reader :a, :b, :c
+
+  def initialize(a, b ,c)
+    @a, @b, @c = a, b, c
+  end
+end
+```
+and you can do this:
+
+```ruby
+
+a = A.new(1,2,3)
+a.to_hash # => {:a => 1, :b => 2, :c => 3}
+```
+
 
 ## Contributing
 
